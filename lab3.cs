@@ -20,6 +20,11 @@ JSON.
 6. Организовать обработку некорректного формата входного файла.
 */
 
+/*
+-функция ADD_PLANE(рейс, тип, экипаж, вес)
+-
+*/
+
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -29,7 +34,8 @@ namespace labs {
     
     class lab3 {
         static void Main3() {
-
+            Airline aeroflot = new Airline();
+            
         }
     }
 

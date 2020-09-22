@@ -7,7 +7,7 @@ namespace labs
         public void Main0()
         {
             Console.WriteLine("\nWhat is your name? ");
-            var name = Console.ReadLine();
+            string name = Console.ReadLine();
             Console.WriteLine($"\nHello, {name}!");
         }
     }

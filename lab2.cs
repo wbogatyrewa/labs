@@ -80,7 +80,7 @@ namespace labs {
         public static Vector operator +(Vector a, Vector b) {
             double module = Math.Sqrt(Math.Pow((a.GetCoordinateX() + b.GetCoordinateX()), 2) +
             Math.Pow((a.GetCoordinateY() + b.GetCoordinateY()), 2));
-            double x = 5;
+            double x = a.GetCoordinateX() + b.GetCoordinateX();
             double angle = Math.Acos(x/module);
             return new Vector { Module = module, Angle = angle };
         }
@@ -88,7 +88,7 @@ namespace labs {
         public static Vector operator -(Vector a, Vector b) {
             double module = Math.Sqrt(Math.Pow((a.GetCoordinateX() - b.GetCoordinateX()), 2) +
             Math.Pow((a.GetCoordinateY() - b.GetCoordinateY()), 2));
-            double x = 5;
+            double x = a.GetCoordinateX() - b.GetCoordinateX();
             double angle = Math.Acos(x/module);
             return new Vector { Module = module, Angle = angle };
         }
