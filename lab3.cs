@@ -34,8 +34,21 @@ namespace labs {
     
     class lab3 {
         static void Main3() {
+
             Airline aeroflot = new Airline();
-            
+
+            aeroflot.Planes.Add(new Cargo { flight = 8451, crew = { "Nika", "Vova" }, 
+                                            weightOfPlane = 554, weightOfCargo = 7964 });
+            aeroflot.Planes.Add(new Passenger { flight = 6845, crew = { "Dasha", "Igor" }, 
+                                            weightOfPlane = 145, seat = 512 });
+            aeroflot.Planes.Add(new Cargo { flight = 4314, crew = { "Alex", "Sasha" }, 
+                                            weightOfPlane = 431, weightOfCargo = 3424 });
+            aeroflot.Planes.Add(new Passenger { flight = 4541, crew = { "Misha", "Taya" }, 
+                                            weightOfPlane = 214, seat = 165 });
+            aeroflot.Planes.Add(new Passenger { flight = 9984, crew = { "Sasha", "Nastya" }, 
+                                            weightOfPlane = 354, seat = 202 });
+
+            var serializer = new XmlSerializer(typeof(List<Plane>));
         }
     }
 
@@ -43,7 +56,7 @@ namespace labs {
     [XmlInclude(typeof(Passenger))]
     public abstract class Plane {
         public int flight { get; set; }
-        public List<FIO> crew = new List<FIO>();
+        public List<string> crew = new List<string>();
         public int weightOfPlane { get; set; }
         public abstract int TakeoffWeight();
     }
@@ -64,20 +77,15 @@ namespace labs {
 
     }
 
-    public class FIO {
-        public string firstName;
-        public string lastName;
-    }
-
     class Airline {
-        public List<Plane> planes { get; set; } = new List<Plane>();
-        
-        public void AddPlane() {
-            //planes.Add();
+        public List<Plane> Planes { get; set; } = new List<Plane>();
+
+        public List<Plane> GetPlanes(){
+            return Planes;
         }
 
         public void SortByWeight() {
-            planes.OrderBy(plane => plane.TakeoffWeight()).ThenBy(plane => plane.flight);
+            Planes.OrderBy(plane => plane.TakeoffWeight()).ThenBy(plane => plane.flight);
         }
 
     }

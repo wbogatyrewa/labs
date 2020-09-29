@@ -8,7 +8,7 @@
  
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections;
 
 namespace labs {
     
@@ -71,12 +71,20 @@ namespace labs {
         }
     }
 
+    class NoteCompare : IComparer<Note> {
+
+        public int Compare(Note x, Note y) {
+            if (x == null || y == null) return -1;
+            return x.GetName().CompareTo(y.GetName());
+        }
+    }
     class Note {
         private string Name;
         private DateTime Date;
         private string Number;
 
-        public Note( string name, DateTime date, string number) {
+        public Note() {  }
+        public Note(string name, DateTime date, string number) {
             Name = name;
             Date = date;
             Number = number;
@@ -90,7 +98,6 @@ namespace labs {
         public string GetNumber() {
             return Number;
         }
-
     }
     class Notebook {
         private List<Note> notebook = new List<Note>();
@@ -100,13 +107,20 @@ namespace labs {
         }
 
         public List<Note> FindNote(string name) {
-            List<Note> notes = new List<Note>();
-            foreach (Note note in notebook) {
-                if (note.GetName() == name) {
-                    notes.Add(note);
-                }
+            Note note = new Note(name, new DateTime(2001, 1, 1) , "80000000000") {  };
+            notebook.Sort((x, y) => string.Compare(x.GetName(), y.GetName()));
+            List<Note> notebook_fake = notebook;
+            List<Note> findNotes = new List<Note>();
+            int index = 0;
+            while (index >= 0) {
+                index = notebook_fake.BinarySearch(note, new NoteCompare());
+                if (index >= 0) {
+                    findNotes.Add(notebook_fake[index]);
+                    notebook_fake.Remove(notebook_fake[index]);
+                } 
             }
-            return notes;
+            return findNotes;
+            //return notebook.FindAll(x => x.GetName() == name);
         }
 
         public void AddNote(Note note) {
