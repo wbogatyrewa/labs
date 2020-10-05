@@ -177,38 +177,30 @@ namespace labs {
             }
             if (!reader.Read()
                     || reader.TokenType != JsonTokenType.PropertyName
-                    || reader.GetString() != "TypeDiscriminator")
-            {
+                    || reader.GetString() != "TypeDiscriminator") {
                 throw new JsonException();
             }
-
-            if (!reader.Read() || reader.TokenType != JsonTokenType.Number)
-            {
+            if (!reader.Read() || reader.TokenType != JsonTokenType.Number) {
                 throw new JsonException();
             }
 
             Plane baseClass;
             TypeDiscriminator typeDiscriminator = (TypeDiscriminator)reader.GetInt32();
-            switch (typeDiscriminator)
-            {
+            switch (typeDiscriminator) {
                 case TypeDiscriminator.Cargo:
-                    if (!reader.Read() || reader.GetString() != "Cargo")
-                    {
+                    if (!reader.Read() || reader.GetString() != "Cargo") {
                         throw new JsonException();
                     }
-                    if (!reader.Read() || reader.TokenType != JsonTokenType.StartObject)
-                    {
+                    if (!reader.Read() || reader.TokenType != JsonTokenType.StartObject) {
                         throw new JsonException();
                     }
                     baseClass = (Cargo)JsonSerializer.Deserialize(ref reader, typeof(Cargo));
                     break;
                 case TypeDiscriminator.Passenger:
-                    if (!reader.Read() || reader.GetString() != "Passenger")
-                    {
+                    if (!reader.Read() || reader.GetString() != "Passenger") {
                         throw new JsonException();
                     }
-                    if (!reader.Read() || reader.TokenType != JsonTokenType.StartObject)
-                    {
+                    if (!reader.Read() || reader.TokenType != JsonTokenType.StartObject) {
                         throw new JsonException();
                     }
                     baseClass = (Passenger)JsonSerializer.Deserialize(ref reader, typeof(Passenger));
