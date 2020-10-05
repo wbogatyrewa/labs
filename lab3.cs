@@ -90,7 +90,7 @@ namespace labs {
                     Console.WriteLine("Average weight = {0:0.0}", aeroflot.averageWeight);
                 } else if (func == "write") {
                     // Запись данных в файл JSON
-                    Console.WriteLine("Enter filename");
+                    Console.WriteLine("Enter JSON filename");
                     string FileWriter = Console.ReadLine();
                     var options = new JsonSerializerOptions {
                         Converters = { new BaseClassConverter() },
