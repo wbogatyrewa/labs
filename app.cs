@@ -15,8 +15,11 @@ namespace labs {
                 } else if (lab == "2") {
                     lab2 Lab2 = new lab2();
                     Lab2.Main2();
+                } else if (lab == "3") {
+                    lab3 Lab3 = new lab3();
+                    Lab3.Main3();
                 } else {
-                    Console.WriteLine("So, I do only two labs)");
+                    Console.WriteLine("So, I do only three labs)");
                     break;
                 }
             }

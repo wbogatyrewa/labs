@@ -1,0 +1,62 @@
+[
+  {
+    "TypeDiscriminator": 1,
+    "Cargo": {
+      "weightOfCargo": 7964,
+      "flight": 8451,
+      "crew": [
+        "Nika",
+        "Vova"
+      ],
+      "weightOfPlane": 554
+    }
+  },
+  {
+    "TypeDiscriminator": 2,
+    "Passenger": {
+      "seat": 512,
+      "flight": 6845,
+      "crew": [
+        "Dasha",
+        "Igor"
+      ],
+      "weightOfPlane": 145
+    }
+  },
+  {
+    "TypeDiscriminator": 1,
+    "Cargo": {
+      "weightOfCargo": 3424,
+      "flight": 4314,
+      "crew": [
+        "Alex",
+        "Sasha"
+      ],
+      "weightOfPlane": 431
+    }
+  },
+  {
+    "TypeDiscriminator": 2,
+    "Passenger": {
+      "seat": 165,
+      "flight": 4541,
+      "crew": [
+        "Misha",
+        "Taya"
+      ],
+      "weightOfPlane": 214
+    }
+  },
+  {
+    "TypeDiscriminator": 2,
+    "Passenger": {
+      "seat": 202,
+      "flight": 9984,
+      "crew": [
+        "Sasha",
+        "Nastya"
+      ],
+      "weightOfPlane": 354
+    }
+  }
+]
