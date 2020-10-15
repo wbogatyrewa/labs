@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="15.0.7" />
+    <PackageReference Include="Linq.Csv" Version="1.2.0" />
+  </ItemGroup>
+
 </Project>

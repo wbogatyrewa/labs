@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "fR/zz2JlwBQwunELx/oPvtih9mN2oxAF6Zc9E0MSclYGfp14kKjMO2RHQjvGH1FzgjHb+65GtXM91T23pUCXFg==",
+  "dgSpecHash": "sVLrUfInN8cTtvJL9TxyjUb4qAg4jAJAhSk+DllsTvFz+18fgerdtqvlaQKT8Whm7KCJwv1Q+BQpVKqXpWO/5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\veron\\OneDrive\\Рабочий стол\\susu\\progs\\c#\\labs\\labs.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\veron\\.nuget\\packages\\csvhelper\\15.0.7\\csvhelper.15.0.7.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\linq.csv\\1.2.0\\linq.csv.1.2.0.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Linq.Csv 1.2.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Linq.Csv",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

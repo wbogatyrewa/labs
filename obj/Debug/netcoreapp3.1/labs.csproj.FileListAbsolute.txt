@@ -11,3 +11,6 @@ C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\obj\Debug\net
 C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\obj\Debug\netcoreapp3.1\labs.dll
 C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\obj\Debug\netcoreapp3.1\labs.pdb
 C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\obj\Debug\netcoreapp3.1\labs.genruntimeconfig.cache
+C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\bin\Debug\netcoreapp3.1\CsvHelper.dll
+C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\obj\Debug\netcoreapp3.1\labs.csproj.CopyComplete
+C:\Users\veron\OneDrive\Рабочий стол\susu\progs\c#\labs\bin\Debug\netcoreapp3.1\Linq.Csv.dll

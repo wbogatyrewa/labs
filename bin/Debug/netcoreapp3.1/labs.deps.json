@@ -7,10 +7,34 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "labs/1.0.0": {
+        "dependencies": {
+          "CsvHelper": "15.0.7",
+          "Linq.Csv": "1.2.0"
+        },
         "runtime": {
           "labs.dll": {}
         }
-      }
+      },
+      "CsvHelper/15.0.7": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/CsvHelper.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.7.0"
+          }
+        }
+      },
+      "Linq.Csv/1.2.0": {
+        "runtime": {
+          "lib/net45/Linq.Csv.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {}
     }
   },
   "libraries": {
@@ -18,6 +42,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CsvHelper/15.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/J+GPucE3HGpyS9skxg7tTAVr9esksy/IkKdCiYRveZqwG56kgvvOMW2t478ZvNBj1VT6k2057/GohR8ij0PTw==",
+      "path": "csvhelper/15.0.7",
+      "hashPath": "csvhelper.15.0.7.nupkg.sha512"
+    },
+    "Linq.Csv/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AyiJ9Zpes6MxIeglP6SlKs+0yzok/ziAiu3nB8eW8/LJd0dkEqwzUTRdJpmta7pdv0pCWAj8MtObO+nPZx59/Q==",
+      "path": "linq.csv/1.2.0",
+      "hashPath": "linq.csv.1.2.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     }
   }
 }
