@@ -35,11 +35,6 @@ namespace labs {
                     lab4 Lab4 = new lab4();
                     Lab4.Main4();
 
-                } else if (lab == "5") {
-
-                    lab5 Lab5 = new lab5();
-                    Lab5.Main5();
-
                 } else break;
                 
             }

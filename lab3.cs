@@ -70,6 +70,7 @@ namespace labs {
                         aeroflot.AddPlane(new Passenger { flight = flight, crew = crew, 
                                                     weightOfPlane = weight, seat = seat });
                     }
+                    aeroflot.averageWeight = AverageWeightOfPlane(aeroflot);
                 } else if (func == "sort") {
                     // Сортировка списка самолетов, затем его вывод
                     aeroflot.SortByWeight();
@@ -118,8 +119,11 @@ namespace labs {
                                 WriteIndented = true
                             };
                             string jsonReader = File.ReadAllText(FileReader);
-                            var airline = JsonSerializer.Deserialize<List<Plane>>(jsonReader, options);
-                            PrintPlanes(airline, 0, airline.Count);
+                            List<Plane> Planes = JsonSerializer.Deserialize<List<Plane>>(jsonReader, options);
+                            Airline airport = new Airline();
+                            airport.Planes = Planes;
+                            airport.averageWeight = AverageWeightOfPlane(airport);
+                            PrintPlanes(airport.Planes, 0, airport.Planes.Count);
                         }
                     } catch (Exception e) {
                         Console.WriteLine("Error: {0}", e.Message);

@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "NHDYjQp2Havn9NK/ThnoBYcXjwOJI9NTtY5mKdfEwqb94zKksFJj1HuELEiHgFOhFwnEQ5gvvYXL07t4Bn0VyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\veron\\source\\repos\\lab5\\lab5\\lab5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\veron\\.nuget\\packages\\htmlagilitypack\\1.11.25\\htmlagilitypack.1.11.25.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\2.1.0\\microsoft.extensions.dependencyinjection.2.1.0.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.1.0\\microsoft.extensions.logging.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\microsoft.toolkit.forms.ui.controls.webview\\6.1.2\\microsoft.toolkit.forms.ui.controls.webview.6.1.2.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.18362.2005\\microsoft.windows.sdk.contracts.10.0.18362.2005.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\veron\\.nuget\\packages\\vknet\\1.57.0\\vknet.1.57.0.nupkg.sha512"
+  ],
+  "logs": []
+}

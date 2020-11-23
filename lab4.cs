@@ -56,8 +56,12 @@ namespace labs {
 
             string emails;
             if (page.Purpose.Count != 0) {
-                List<string> ListEmails = page.Purpose.Cast<Match>().Select(m => m.Value).ToList();
-                emails = string.Join(",", ListEmails.Distinct()); // исключать повторения emails  
+                List<string> Emails = page.Purpose.Cast<Match>().Select(m => m.Value).ToList();
+                for (int i = 0; i < Emails.Count; i++) {
+                    string new_e = Emails[i].Replace("[at]", "@").Replace("[dot]", ".");
+                    Emails[i] = new_e;
+                }
+                emails = string.Join(",", Emails.Distinct()); // исключать повторения emails  
             } else {
                 emails = "Not found";
             }
@@ -70,7 +74,7 @@ namespace labs {
             // запись данных в csv-файл
 
             using (var stream = File.Open("analysis.csv", FileMode.Append))
-            using (var writer = new StreamWriter(stream))
+            using (var writer = new StreamWriter(stream, Encoding.UTF8))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture)) {    
 
                 csv.Configuration.Delimiter = ";";
@@ -82,14 +86,6 @@ namespace labs {
                 csv.NextRecord();
 
             }
-
-            /*var csv = new StringBuilder();
-            var newLine = string.Format("{0}, {1}, {2}, {3}", page.LinkName, page.Uri, 
-                                        page.Level, emails, 
-                                        Environment.NewLine);
-            csv.AppendLine(newLine);  
-
-            File.AppendAllText("analysis.csv", csv.ToString());*/
 
         }
 
@@ -109,6 +105,7 @@ namespace labs {
         public int GetLevels() {
 
             // определить количество уровней
+
             int levels = -1;
             foreach (char ch in Uri) {
                 if (ch == '/') {
@@ -161,11 +158,8 @@ namespace labs {
     class WebPage {
 
         public Group LinkName { get; set; }
-
         public Uri Uri { get; set; }
-
         public int Level { get; set; }
-
         public MatchCollection Purpose { get; set; }
 
     }
