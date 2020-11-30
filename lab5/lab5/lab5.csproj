@@ -52,17 +52,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttachmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttachmentsForm.Designer.cs">
+      <DependentUpon>AttachmentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImportantMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ImportantMessageForm.Designer.cs">
       <DependentUpon>ImportantMessageForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MessageForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MessageForm.Designer.cs">
-      <DependentUpon>MessageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="VkClient.cs">
       <SubType>Form</SubType>
@@ -70,14 +70,15 @@
     <Compile Include="VkClient.Designer.cs">
       <DependentUpon>VkClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="VkMessage.cs" />
     <Compile Include="VkUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AttachmentsForm.resx">
+      <DependentUpon>AttachmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImportantMessageForm.resx">
       <DependentUpon>ImportantMessageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MessageForm.resx">
-      <DependentUpon>MessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VkClient.resx">
       <DependentUpon>VkClient.cs</DependentUpon>

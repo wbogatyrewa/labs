@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class VkUser
+    public class VkUser
     {
         public string AccessToken { get; set; }
         public string UserId { get; set; }
@@ -14,6 +14,16 @@ namespace lab5
         public string Surname { get; set; }
         public string Photo { get; set; }
 
+        public VkUser()
+        {
+
+        }
+
+        public VkUser(string accessToken, string userId)
+        {
+            AccessToken = accessToken;
+            UserId = userId;
+        }
     }
 
 }

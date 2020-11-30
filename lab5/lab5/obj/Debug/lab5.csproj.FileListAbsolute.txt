@@ -18,5 +18,5 @@ C:\Users\veron\source\repos\lab5\lab5\bin\Debug\Microsoft.Extensions.DependencyI
 C:\Users\veron\source\repos\lab5\lab5\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\veron\source\repos\lab5\lab5\bin\Debug\Newtonsoft.Json.dll
 C:\Users\veron\source\repos\lab5\lab5\bin\Debug\VkNet.dll
-C:\Users\veron\source\repos\lab5\lab5\obj\Debug\lab5.MessageForm.resources
 C:\Users\veron\source\repos\lab5\lab5\obj\Debug\lab5.ImportantMessageForm.resources
+C:\Users\veron\source\repos\lab5\lab5\obj\Debug\lab5.AttachmentsForm.resources
