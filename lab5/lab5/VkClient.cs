@@ -43,7 +43,7 @@ namespace lab5
 {
     public partial class VkClient : Form
     {
-        private int appId = 7652326;
+        private int appId = 0000000;
         private string scope = "account,messages";
         private VkUser user = new VkUser();
         private List<VkMessage> vkMessages = new List<VkMessage>();
